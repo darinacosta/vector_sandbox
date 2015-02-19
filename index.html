@@ -1,0 +1,24 @@
+<html>
+  <head>
+  	<meta charset="UTF-8">
+    <meta content="utf-8" http-equiv="encoding">  
+  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+  </head>
+  <body ng-app="vector-land">
+    <div ng-controller="linechart" id="nv">
+  	  <linechart data="data" options="options" height="500"></linechart>
+      <form novalidate>
+        X: <input type="text" ng-model="xValue"><br>
+        Y: <input type="text" ng-model="yValue"><br>
+      </form>
+
+     <p>{{valueTest}}</p>
+
+    </div>
+
+  	<script src="js/app.js"></script>
+  	<script src="bower_components/d3/d3.min.js"></script>
+  	<script src ="bower_components/n3-line-chart/build/line-chart.min.js"></script>
+
+  </body>
+</html>
