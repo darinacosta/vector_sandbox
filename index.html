@@ -3,13 +3,27 @@
   	<meta charset="UTF-8">
     <meta content="utf-8" http-equiv="encoding">  
   	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <style>
+      body{
+        font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+        font-size: 11px;
+      }
+      
+      form{
+        margin-left:20px;
+      }
+
+        form>input{
+          margin-top:10px;
+        }
+    </style>
   </head>
   <body ng-app="vector-land">
     <div ng-controller="linechart" id="nv">
-  	  <linechart data="data" options="options" height="500"></linechart>
+  	  <linechart data="data" options="options" height="500" width="600"></linechart>
       <form novalidate>
-        X: <input type="text" ng-model="xValue"><br>
-        Y: <input type="text" ng-model="yValue"><br>
+        X: <input type="text" ng-model="xValue"> {{unitVectorX}}<br>
+        Y: <input type="text" ng-model="yValue"> {{unitVectorY}}<br>
       </form>
 
      <p>{{valueTest}}</p>
