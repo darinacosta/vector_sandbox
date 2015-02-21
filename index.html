@@ -24,8 +24,12 @@
   <body ng-app="vector-land">
     <div class="container">     
       <div class="span12">  
+        <h1>Vector Calculator</h1>
+        <ul class="nav nav-pills" ng-controller="TabsCtrl as tabs">
+          <li ng-class="{ active: tabs.isSet(1) }"><a href="#" ng-click="tabs.setTab(1)" ui-sref="vector-unit">Unit Vectors</a></li>
+          <li ng-class="{ active: tabs.isSet(2) }"><a href="#" ng-click="tabs.setTab(2)" ui-sref="hypotenuse">Vector Addition</a></li>
+        </ul>
         <ui-view></ui-view>
-        <span ui-sref="vector-unit">Unit Vectors</span> | <span ui-sref="hypotenuse">Hypotenuse</span> 
       </div>
     </div>
   	<script src="js/app.js"></script>

@@ -35,6 +35,19 @@ angular.module("vector-land", ["n3-line-chart","ui.router"])
     
 	})
 
+	.controller('TabsCtrl', ['$scope', function ($scope) {
+
+    this.tab = 1;
+
+    this.setTab = function(newValue){
+      this.tab = newValue;
+    };
+
+    this.isSet = function(tabName){
+      return this.tab === tabName;
+    };
+  }])
+
   .controller("unitVectors", ['$scope', 'vectorFunctions', function($scope, vf){
     $scope.title = "Unit Vectors"
   	$scope.xValue = 10
