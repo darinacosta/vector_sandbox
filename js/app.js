@@ -18,7 +18,7 @@ angular.module("vector-land", ["n3-line-chart","ui.router"])
 	.service("vectorFunctions", function VectorFunctions(){
 		var vf = this;
 
-		vf.calculateHypotenuse = function(vector){
+		vf.calculateVectorMagnitude = function(vector){
 
       var vectorMagnitude1 = Math.sqrt(Math.pow(vector[0][0], 2) + Math.pow(vector[0][1], 2)),
           vectorMagnitude2 = Math.sqrt(Math.pow(vector[1][0], 2) + Math.pow(vector[1][1], 2));
@@ -95,6 +95,8 @@ angular.module("vector-land", ["n3-line-chart","ui.router"])
   .controller("hypotenuse", ['$scope', 'vectorFunctions', function($scope, vf){
     
     $scope.title = "Add & Subtract Vectors"
+    $scope.descrip = "Vector 2b shares the same magnitude and direction as Vector 2, but its tail is moved to the head of Vector 1 to illustrate the additive relationship of the two vectors."
+
 
   	$scope.x_1 = 3
   	$scope.y_1 = 19
@@ -140,9 +142,9 @@ angular.module("vector-land", ["n3-line-chart","ui.router"])
 			  },
 			  series: [
 			    {y: 'value', color: 'steelblue', thickness: '2px', type: 'linear', striped: true, label: 'Vector 1'},
-			    {y: 'value2r', color: 'pink', thickness: '1px', type: 'linear', lineMode: 'dashed', striped: true, label: 'Vector 2A'},
-			    {y: 'value2', color: 'red', thickness: '2px', type: 'linear', striped: true, label: 'Vector 2B'},
-			    {y: 'value3', color: 'green', thickness: '2px', type: 'linear', lineMode: 'dashed', striped: true, label: 'Product'}
+			    {y: 'value2r', color: 'rgb(192, 133, 103)', thickness: '2px', type: 'linear', striped: true, label: 'Vector 2'},
+			    {y: 'value2', color: 'lightgrey', thickness: '2px', type: 'linear', striped: true, label: 'Vector 2B'},
+			    {y: 'value3', color: 'green', thickness: '2px', type: 'linear', striped: true, label: 'Product'}
 
 			  ],
 			  lineMode: 'linear',
