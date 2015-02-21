@@ -72,7 +72,7 @@ angular.module("vector-land", ["n3-line-chart","ui.router"])
 		  drawLegend: true,
 		  drawDots: true,
 		  columnsHGap: 5
-		}
+		} 
   }])
 
   .controller("hypotenuse", ['$scope', 'vectorFunctions', function($scope, vf){
