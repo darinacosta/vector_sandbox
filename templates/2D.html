@@ -1,11 +1,22 @@
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-6 col-sm-12">
     <linechart data="data" options="options" height="500" width="600"></linechart>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-6 col-sm-12">
+  	<h3>{{title}}</h3>
 		<form novalidate>
-		  X1: <input type="number" ng-model="x_1"> Y1: <input type="number" ng-model="y_1"><br>
-		  X2: <input type="number" ng-model="x_2"> Y2: <input type="number" ng-model="y_2"><br>
+			<row>
+				<div class="col-xs-6">
+					<b>Vector 1</b><br>
+		      X1: <input type="number" ng-model="x_1"><br>
+		      Y1: <input type="number" ng-model="y_1">
+		    </div>
+		    <div class="col-xs-6">
+		    	<b>Vector 2</b><br>
+		      X2: <input type="number" ng-model="x_2"><br>
+		      Y2: <input type="number" ng-model="y_2">
+		    </div>
+		  </row>
 		</form>
 	</div>
 </div>

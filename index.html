@@ -9,6 +9,7 @@
       body{
         font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
         font-size: 11px;
+        padding-bottom:45px;
       }
       
       form{
@@ -19,16 +20,35 @@
           margin-top:10px;
           width: 70px;
         }
+
+      h1{
+        text-align:center;
+      }
+
+      h3{
+        font-style: italic;
+      }
+
+      .vector-a{
+        border-color: blue;
+      }
+
+      .vector-b{
+        border-color: red;
+      }
+
     </style>
   </head>
   <body ng-app="vector-land">
     <div class="container">     
       <div class="span12">  
         <h1>Vector Calculator</h1>
+        <hr>
         <ul class="nav nav-pills" ng-controller="TabsCtrl as tabs">
           <li ng-class="{ active: tabs.isSet(1) }"><a href="#" ng-click="tabs.setTab(1)" ui-sref="vector-unit">Unit Vectors</a></li>
           <li ng-class="{ active: tabs.isSet(2) }"><a href="#" ng-click="tabs.setTab(2)" ui-sref="hypotenuse">Vector Addition</a></li>
         </ul>
+        <hr>
         <ui-view></ui-view>
       </div>
     </div>
