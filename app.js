@@ -1,18 +1,18 @@
 app = angular.module("app", ["n3-line-chart","ui.router"])
   
   .config(function config($stateProvider){
-		$stateProvider.state("vector-unit", {
-			url: "",
-			controller: "unitVectors as uv",
-			templateUrl: "components/unit-vectors/unit-vectors.html"
-		});
+		$stateProvider
+			.state("vector-unit", {
+				url: "",
+				controller: "unitVectors as uv",
+				templateUrl: "components/unit-vectors/unit-vectors.html"
+			})
 
-
-		$stateProvider.state("hypotenuse", {
-			url: "",
-			controller: "hypotenuse as hypotenuse",
-			templateUrl: "components/vector-addition/vector-addition.html"
-		})
+			.state("hypotenuse", {
+				url: "",
+				controller: "hypotenuse as hypotenuse",
+				templateUrl: "components/vector-addition/vector-addition.html"
+			})
 	})
 
 
